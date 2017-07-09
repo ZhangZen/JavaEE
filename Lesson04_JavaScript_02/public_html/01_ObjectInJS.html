@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Object in JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script language = "javascript">
+            var empty_object = {};// dinh nghia 1 object
+            //
+            var stooge = {// dinh nghia 1 object day du thong tin
+                "first_name": "Bui Ba",
+                "last_name": "Truong"
+            };
+            //1 object co the co cac thuoc tinh la object khac
+            var flight = {
+                airline: "VietnamAirline",
+                number: 815,
+                departure: {
+                    IATA: "SYD",
+                    time: "2004-09-22 14:55",
+                    city: "Sydney"
+                },
+                arrival: {
+                    IATA: "LAX",
+                    time: "2004-09-23 10:42",
+                    city: "Los Angeles"
+                }
+            };
+            document.write(stooge.first_name + "<br>");// cach truy cap vao du lieu trong object
+            document.write(stooge['first_name'] + "<br>");// cach viet khac cua cau lenh tren, neu viet la stooge["first_name"] thi khong duoc
+            document.write(flight.departure.IATA + "<br>");// truy cap qua 2 lop
+            /*  Cap nhat thong tin cho thuoc tinh trong object: Thuoc tinh trong object co the bi thay doi bang cach cap nhat lai
+             * - Neu ten thuoc tinh trong object da ton tai thi gia tri cua no se bi thay the boi gia tri moi
+             * - Neu ten thuoc tinh trong object chua ton tai thi thuoc tinh do se duoc tao ra
+             */
+            stooge['first_name'] = 'John';// update gia tri cua first_name trong object stooge
+            document.write(stooge.first_name + "<br>");
+            stooge.nick_name = 'Loooooooooonnnnngggggggggg';// tao 1 thuoc tinh khac trong object stooge
+            document.write(stooge.nick_name + "<br>");
+            //Co the xoa bo thuoc tinh cua 1 object bang lenh delete
+            stooge.another_nick_name = '11111111111111';
+            delete stooge.nick_name;
+            document.write("<h1>" + stooge.nick_name + "</h1>");
+            document.write("<h1>" + stooge.another_nick_name + "</h1><br>");
+            // Moi object trong JS deu duoc lien ket toi 1 object nguyen mau trong JS
+            // Tat ca object deu ke thua tu object nguyen mau nay
+            // no lien ket toi Object.prototype
+            // Google to read more infor @@
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <description>HttpSessionListener</description>
+        <listener-class>SessionEvent.SessionEvent</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>DemoSession</servlet-name>
+        <servlet-class>Control.DemoSession</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DemoCookie</servlet-name>
+        <servlet-class>Control.DemoCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DemoSession</servlet-name>
+        <url-pattern>/DemoSession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DemoCookie</servlet-name>
+        <url-pattern>/DemoCookie</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

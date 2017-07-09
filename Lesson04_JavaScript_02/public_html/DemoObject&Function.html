@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Demo JavaScript 03</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script language="javascript">
+            function person(firstName, lastName) {// dinh nghia object trong JS
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.inThongTin = inThongTin;// khai bao ham
+            }
+            // Demo function trong JS
+            function inThongTin() {
+                with (document) {// with dung de mo ta 1 object
+                    write("Name: " + this.firstName + " " + this.lastName + "<br>");
+                }
+            }
+            person1 = new person("Nguyen Van", "A");// khai bao 1 object kieu person
+            person2 = new person("Dang Quang The", "An");
+            // su dung ham
+            person1.inThongTin();
+            person2.inThongTin();
+        </script>
+    </body>
+</html>

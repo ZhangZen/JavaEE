@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Demo JavaScript part 01</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--JS la mot mon ngu kich ban, ve co ban no cung co 1 so diem co ban giong nhu cac ngon ngu khac-->
+        <!--Truoc het la ve toan tu, JS cung co +, -, *, /, %-->
+        <script language="javascript">
+            document.write("Demo bien va cac toan tu trong JS: <br>");
+//            window.document.write("Demo bien va cac toan tu trong JS: <br>"); ==> Cau lenh nay chinh la cau lenh tren
+            var a = 10;
+//            a = 10; tuong tu cau lenh tren
+            document.writeln(a + "<br>");
+            var b = 20;
+            document.writeln(b + "<br>");
+            var c = a + b;
+            document.writeln(c + "<br>");
+            var d = a + "abc";
+            document.writeln(d + "<br>");
+            // khai bao mang trong JS
+            var arr = ['apple', 'samsung', 'sky'];
+            // khai bao object trong JS
+            var obj = new Object();
+            var obj2 = function () {
+                //....
+            };
+            // if-else
+            if (a === 10) {
+                document.writeln("Hello<br>");
+            } else {
+                if (b > 20) {
+                    document.writeln("Good bye<br>");
+                }
+            }
+            // for
+            //- for-i
+            for (var i = 0; i < 20; i++) {
+                document.writeln(i + " ");
+                if (i === 10) {
+                    break;
+                } else {
+                    i += 2;
+                    continue;
+                }
+            }
+            //- for-in (google)
+            // while- doWhile
+            while (b > 0) {
+                document.writeln(b);
+                b--;
+                if (b === 3) {
+                    break;
+                }
+            }
+            document.writeln("<br>");
+            do {
+                document.writeln(c % 2);
+                c--;
+            } while (c > 0);
+        </script>
+    </body>
+</html>

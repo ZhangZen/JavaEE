@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Demo JavaScrpit 02</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            //ham (function)
+            function helloWorld() {
+                alert("Hello World");
+            }
+            function example(name, ages) {// co the truyen tham so vao trong ham
+                document.writeln("Hello " + name + ", you're " + ages + " years old.");
+            }
+            function fullName(first, last) {
+                return first + last;
+            }
+            function showName() {
+                document.writeln(fullName("Bui Ba", "Truong"));
+            }
+//                document.getElementById("button01").function() {
+//                    alert();
+//                }
+        </script>
+    </head>
+    <body>
+        <p>Click me to see ;)</p>
+        <form>
+            <input type="button" onclick="helloWorld()" value="Click me">
+        </form>
+        <hr>
+        <!--=========================================================-->
+        <p>Try another example</p>
+        <input type="button" id="button01" name="click" value="Click me" onclick="example('Nguyen Van A', 12)">
+        <!--=========================================================-->
+        <p style="color: red">Click the button here to see the changing</p>
+        <input type="button" value="Try again" name="click2" onclick="showName()">
+    </body>
+</html>
